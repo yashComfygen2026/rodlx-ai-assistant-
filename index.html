@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>RODLX • Communications review</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;color:#172335;background:#f4f6f8;font-synthesis:none;--line:#dce3e9;--muted:#607086;--green:#bceb54;--navy:#102338}*{box-sizing:border-box}body{margin:0}button,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.45}a{color:inherit}header{background:var(--navy);color:white;padding:24px 32px}.top{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:23px;font-weight:850;letter-spacing:2px}.brand span{color:var(--green)}.eyebrow{text-transform:uppercase;font-size:11px;font-weight:750;letter-spacing:1.5px;color:var(--muted)}header .eyebrow{color:#bfcedd;margin-top:5px}.pill{display:inline-flex;align-items:center;gap:7px;border-radius:30px;padding:6px 11px;font-size:11px;font-weight:750;letter-spacing:.5px;background:#edf4e4;color:#476325}.pill.warn{background:#fff1d5;color:#875514}.languages{display:flex;gap:5px;background:#25394e;padding:4px;border-radius:11px}.languages button{background:none;color:#dce5ee;border:0;border-radius:7px;padding:8px 13px;font-size:13px}.languages button[aria-pressed=true]{background:white;color:#142a40;font-weight:750}main{max-width:1200px;padding:28px 32px 40px;margin:auto}.notice{border:1px solid #eadbb4;background:#fffaf0;border-radius:12px;padding:12px 16px;font-size:13px;line-height:1.6;color:#725824;margin-bottom:25px}.heading{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:22px}h1{font-size:28px;letter-spacing:-.8px;line-height:1.2;margin:6px 0 9px}p{margin:0;line-height:1.6}.sub{font-size:13px;color:var(--muted)}.grid{display:grid;grid-template-columns:320px minmax(0,1fr);gap:20px;align-items:start}.card{background:white;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 3px 9px #10233804}.section{padding:22px}.card-title{font-size:15px;font-weight:750;margin:0 0 17px}.step{width:22px;height:22px;display:inline-grid;place-items:center;background:#eef2f6;border-radius:6px;font-size:11px;margin-right:7px;color:var(--muted)}label.field{display:block;font-size:12px;font-weight:700;margin-bottom:17px}select,textarea{display:block;width:100%;border:1px solid #cdd8e2;border-radius:9px;background:white;color:#23364a;padding:10px;margin-top:7px;font-size:13px}textarea{resize:vertical;line-height:1.6;min-height:115px}select:focus,textarea:focus,button:focus-visible,input:focus-visible{outline:3px solid #8cbfef;outline-offset:2px}.check{display:flex;gap:9px;align-items:flex-start;font-size:12px;line-height:1.6;padding:12px;background:#f6f8fa;border:1px solid #e7edf2;border-radius:9px;margin:0 0 10px}.check input{accent-color:#417d27;margin-top:4px}.help{font-size:11px;color:var(--muted);line-height:1.6;margin-top:7px}.button{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid #d5dfe7;background:white;color:#2d4258;font-size:12px;font-weight:700;padding:10px 13px;border-radius:9px;min-height:39px}.button:hover{background:#f0f4f8}.primary{background:var(--navy);border-color:var(--navy);color:white}.primary:hover{background:#29435f}.full{width:100%;margin-top:12px}.soft{background:#f2f7e9;color:#43601d;border-color:#dce9c9}.conversation-header{display:flex;align-items:center;justify-content:space-between;background:#fafcfd;padding:18px 22px;border-bottom:1px solid var(--line)}.avatar{width:35px;height:35px;background:var(--navy);color:var(--green);display:grid;place-items:center;border-radius:10px;font-size:12px;font-weight:800}.identity{display:flex;align-items:center;gap:10px}.conversation{padding:24px;min-height:300px;display:flex;flex-direction:column;gap:14px;max-height:540px;overflow:auto}.bubble{max-width:93%;border:1px solid #dfe6ed;background:#f5f8fb;border-radius:3px 13px 13px;padding:14px 16px;font-size:13px;line-height:1.7}.bubble.system{background:#fffaf1;border-color:#efe4cb}.speaker{display:block;font-size:10px;letter-spacing:.8px;font-weight:800;color:#66798d;text-transform:uppercase;margin-bottom:5px}.empty{text-align:center;margin:auto;color:var(--muted);padding:45px 20px;max-width:420px}.empty-mark{font-size:32px;margin-bottom:14px}.actions{border-top:1px solid var(--line);padding:16px 22px;display:flex;gap:8px;flex-wrap:wrap}[hidden]{display:none!important}.outcome{margin-top:17px;border:1px solid #dce7d2;border-radius:12px;padding:15px;background:#f5f9ef;font-size:12px;display:grid;grid-template-columns:1fr 1fr;gap:15px}.outcome strong{display:block;margin-top:5px;font-size:13px}.bottom{margin-top:22px}.records{display:grid;grid-template-columns:1fr 1fr;gap:12px}.record{padding:15px;border:1px solid var(--line);background:#fafbfd;border-radius:10px;font-size:12px}.record strong{display:block;margin:5px 0 9px}.record p{font-size:11px;color:var(--muted)}.config{margin-top:22px}.config summary{padding:20px 22px;cursor:pointer;font-size:14px;font-weight:750}.config-body{border-top:1px solid var(--line);padding:20px 22px}.copy-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.review-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.footer-note{margin-top:25px;color:var(--muted);font-size:11px;line-height:1.7}.feedback{min-height:20px;font-size:12px;color:#61713b;margin-top:10px}.store-only{display:none}body[data-audience=store] .admin-only{display:none!important}body[data-audience=store] .store-only{display:block}body[data-standalone=false] .standalone-only{display:none}.route-pill{font-family:ui-monospace,monospace;font-size:11px}.reviewer{display:flex;gap:10px;align-items:center}.reviewer select{margin:0;font-size:12px;padding:6px}.screen-reader{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}@media(max-width:800px){header{padding:18px}main{padding:22px 16px}.grid{grid-template-columns:1fr}.heading{align-items:flex-start}h1{font-size:24px}.copy-grid,.records{grid-template-columns:1fr}.top{align-items:flex-start}.reviewer{flex-direction:column;align-items:flex-end}.conversation{max-height:none}.outcome{grid-template-columns:1fr}.section{padding:18px}}
+</style>
+</head>
+<body data-audience="admin" data-standalone="true">
+<header><div class="top"><div><div class="brand">ROD<span>LX</span></div><div class="eyebrow" data-i18n="workspace"></div></div><div class="reviewer"><div class="languages" role="group" aria-label="Language"><button id="english" type="button" lang="en" aria-pressed="true">English</button><button id="spanish" type="button" lang="es" aria-pressed="false">Español</button></div><label class="standalone-only"><span class="screen-reader">Preview audience</span><select id="audience"><option value="admin" data-i18n="adminPreview"></option><option value="store" data-i18n="storePreview"></option></select></label></div></div></header>
+<main>
+<div class="notice" data-i18n="notice"></div>
+<div class="heading"><div><div class="eyebrow" data-i18n="eyebrow"></div><h1 id="pageTitle"></h1><p class="sub" data-i18n="subtitle"></p></div><span class="pill warn" data-i18n="draft"></span></div>
+<div class="grid">
+<section class="card section"><h2 class="card-title"><span class="step">1</span><span data-i18n="setup"></span></h2>
+<label class="field"><span data-i18n="scenario"></span><select id="scenario"></select></label>
+<label class="field admin-only"><span data-i18n="availability"></span><select id="availability"><option value="available" data-i18n="available"></option><option value="backup" data-i18n="backup"></option><option value="unavailable" data-i18n="unavailable"></option></select></label>
+<label class="check admin-only"><input type="checkbox" id="verified"><span><b data-i18n="verified"></b><br><span data-i18n="verifiedHelp"></span></span></label>
+<label class="check"><input type="checkbox" id="consent"><span><b data-i18n="consent"></b><br><span data-i18n="consentHelp"></span></span></label>
+<p class="help store-only" data-i18n="storeScope"></p>
+<button class="button primary full" id="run" type="button" data-i18n="run"></button><button class="button full" id="reset" type="button" data-i18n="reset"></button>
+<p class="help" data-i18n="safetyPolicy"></p>
+</section>
+<div>
+<section class="card"><div class="conversation-header"><div class="identity"><div class="avatar">R</div><div><div style="font-size:13px;font-weight:750" data-i18n="assistant"></div><div class="help" style="margin:1px 0" data-i18n="scripted"></div></div></div><button type="button" class="button" id="listen" data-i18n="listen"></button></div>
+<div id="conversation" class="conversation" aria-live="polite"></div>
+<div class="actions"><button class="button" data-action="agent" data-i18n="agent"></button><button class="button" data-action="callback" data-i18n="callback"></button><button class="button" data-action="ticket" data-i18n="ticket"></button><button class="button soft" data-action="sms" data-i18n="sms"></button></div>
+</section>
+<div id="outcome" class="outcome" hidden></div><p id="feedback" class="feedback" role="status"></p>
+</div>
+</div>
+<section class="card section bottom"><h2 class="card-title"><span class="step">2</span><span data-i18n="records"></span> <span class="pill" style="float:right" data-i18n="sampleOnly"></span></h2><div id="records" class="records"></div></section>
+<details class="card config admin-only"><summary data-i18n="config"></summary><div class="config-body"><p class="sub" data-i18n="configHelp"></p><div class="copy-grid"><label class="field">English<textarea id="greetingEN" lang="en" maxlength="2000"></textarea></label><label class="field">Español<textarea id="greetingES" lang="es" maxlength="2000"></textarea></label></div><button class="button" id="download" data-i18n="download"></button><div class="review-list"><span class="pill warn" data-i18n="needsApproval"></span><span class="pill" data-i18n="clientNumbers"></span><span class="pill" data-i18n="clientAgents"></span></div></div></details>
+<p class="footer-note" data-i18n="footer"></p>
+</main>
+<script>
+// Client-review simulation only. No provider, database, account lookup, or external requests.
+const DEMO_COPY = {
+  EN: {
+    greeting: 'Welcome to RODLX, your roadside assistance and mobile vehicle care partner. If you are in immediate danger, please call 911. For urgent roadside support, press 1. For all other assistance, please stay on the line.',
+    intro: 'I am the RODLX demo virtual assistant. How may I assist you?',
+    verify: 'Before sharing private service information, we must verify your identity. Your caller ID alone does not establish identity.',
+    delayed: 'In this sample order, a CARELX technician is assigned. The previous ETA has passed, and there is no confirmed updated ETA. Would you like human support?',
+    registration: 'Service requests must be submitted through the RODLX Customer App. Register, enter your vehicle and location, review the estimate, complete Stripe authorization, and approve applicable parts deposits before Smart Dispatch can offer an assignment.',
+    safety: 'If you are in immediate danger, have injuries, or are exposed to moving traffic, call 911. RODLX support does not replace emergency services.',
+    fallback: 'The AI receptionist is unavailable in this simulated scenario. Press 1 for priority roadside support, or request a callback.',
+    warm: 'Simulated warm transfer: an available bilingual representative receives the caller language and concern summary. Private order details are included only after verification.',
+    backup: 'The primary representative is unavailable. This simulation routes your request to the designated bilingual on-call backup.',
+    unavailable: 'No representative is available in this simulation. We cannot promise immediate assistance. You may request a callback and support follow-up.',
+    callback: 'A demo callback request is linked to a demo Help Desk ticket. No real callback has been scheduled.',
+    ticket: 'A demo support ticket is linked to this interaction. No live Help Desk record has been created.',
+    consent: 'SMS preview is blocked until customer consent is selected. No text messages are sent by this demo.',
+    sms: 'With your consent, RODLX would send an approved app or registration link. The official client-provided URL is still required. This is a preview only.',
+    masked: 'Sample masked message: “I am at the agreed pickup location.” Only the current authorized customer–technician pair may exchange service messages. No SMS is sent.',
+    expired: 'This service order is completed or cancelled. Calling and messaging access has ended immediately. Contact RODLX support for further assistance.',
+    billing: 'Billing disputes require human review. This assistant cannot authorize charges, issue refunds, or bypass Stripe or service approvals.',
+    storeSms: 'Sample store support message: “Please help me with my parts pickup.” No customer contact details are included and no SMS is sent.',
+    store: 'Store support can help with a parts pickup or store-order concern. Customer–technician communications and global routing settings are not available to store accounts.',
+  },
+  ES: {
+    greeting: 'Bienvenido a RODLX, su aliado en asistencia vial y cuidado móvil del vehículo. Si está en peligro inmediato, llame al 911. Para asistencia vial urgente, oprima 1. Para cualquier otra consulta, permanezca en la línea.',
+    intro: 'Soy el asistente virtual de demostración de RODLX. ¿En qué puedo ayudarle?',
+    verify: 'Antes de compartir información privada del servicio, debemos verificar su identidad. El identificador de llamadas por sí solo no confirma su identidad.',
+    delayed: 'En esta orden de ejemplo hay un técnico CARELX asignado. La hora estimada anterior ya pasó y no hay una nueva hora de llegada confirmada. ¿Desea hablar con soporte?',
+    registration: 'Las solicitudes de servicio deben realizarse en la aplicación RODLX. Regístrese, indique su vehículo y ubicación, revise el presupuesto, complete la autorización de Stripe y apruebe los depósitos de piezas correspondientes antes de que Smart Dispatch ofrezca la asignación.',
+    safety: 'Si está en peligro inmediato, hay personas heridas o está expuesto al tráfico, llame al 911. El soporte de RODLX no sustituye a los servicios de emergencia.',
+    fallback: 'El asistente de IA no está disponible en este escenario simulado. Oprima 1 para asistencia vial prioritaria o solicite que le devuelvan la llamada.',
+    warm: 'Transferencia asistida simulada: un representante bilingüe disponible recibe el idioma del cliente y un resumen de la consulta. Los datos privados de la orden solo se incluyen después de la verificación.',
+    backup: 'El representante principal no está disponible. Esta simulación dirige su solicitud al representante bilingüe de guardia.',
+    unavailable: 'No hay representantes disponibles en esta simulación. No podemos prometer asistencia inmediata. Puede solicitar una devolución de llamada y seguimiento de soporte.',
+    callback: 'Se vinculó una solicitud de devolución de llamada de demostración a un ticket de ejemplo. No se ha programado ninguna llamada real.',
+    ticket: 'Se vinculó un ticket de soporte de demostración a esta interacción. No se ha creado ningún registro real en la mesa de ayuda.',
+    consent: 'La vista previa del SMS está bloqueada hasta seleccionar el consentimiento del cliente. Esta demostración no envía mensajes.',
+    sms: 'Con su consentimiento, RODLX enviaría un enlace aprobado de la aplicación o de registro. Aún se necesita la URL oficial del cliente. Esto es solo una vista previa.',
+    masked: 'Mensaje enmascarado de ejemplo: «Estoy en el punto de encuentro acordado». Solo el cliente y el técnico actualmente autorizados pueden intercambiar mensajes del servicio. No se envía ningún SMS.',
+    expired: 'Esta orden de servicio está completada o cancelada. El acceso a llamadas y mensajes terminó de inmediato. Comuníquese con soporte de RODLX si necesita más ayuda.',
+    billing: 'Las disputas de facturación requieren revisión humana. Este asistente no puede autorizar cargos, emitir reembolsos ni omitir las aprobaciones de Stripe o del servicio.',
+    storeSms: 'Mensaje de soporte de tienda de ejemplo: «Necesito ayuda con la recogida de piezas». No se incluyen datos de contacto del cliente ni se envía ningún SMS.',
+    store: 'El soporte para tiendas puede ayudar con la recogida de piezas o una orden de la tienda. Las comunicaciones entre clientes y técnicos y los ajustes globales de llamadas no están disponibles para las cuentas de tienda.',
+  },
+};
+
+const DEMO_SCENARIOS = [
+  { id: 'delayed', EN: 'Technician delayed', ES: 'Retraso del técnico' },
+  { id: 'registration', EN: 'New caller / registration', ES: 'Nuevo cliente / registro' },
+  { id: 'urgent', EN: 'Urgent roadside concern', ES: 'Consulta vial urgente' },
+  { id: 'billing', EN: 'Billing dispute', ES: 'Disputa de facturación' },
+  { id: 'outage', EN: 'AI outage / keypad fallback', ES: 'Falla de IA / menú de respaldo' },
+  { id: 'masked', EN: 'Masked message', ES: 'Mensaje enmascarado' },
+  { id: 'expired', EN: 'Completed or cancelled order', ES: 'Orden completada o cancelada' },
+  { id: 'store', EN: 'Store pickup support', ES: 'Soporte de recogida en tienda' },
+];
+
+function simulateCommunication(input = {}, audience = 'admin') {
+  const { language = 'EN', scenario = audience === 'store' ? 'store' : 'delayed',
+    verified = false, consent = false, availability = 'available', action = 'start' } = input;
+  if (!['EN', 'ES'].includes(language) || !DEMO_SCENARIOS.some(s => s.id === scenario) ||
+      !['available', 'backup', 'unavailable'].includes(availability) ||
+      !['start', 'agent', 'callback', 'ticket', 'sms'].includes(action) ||
+      typeof verified !== 'boolean' || typeof consent !== 'boolean' || !['admin', 'store'].includes(audience)) {
+    throw Object.assign(new Error('Invalid demo scenario input.'), { statusCode: 400 });
+  }
+  if (audience === 'store' && !['store', 'outage', 'urgent'].includes(scenario)) {
+    throw Object.assign(new Error('This scenario is not available in the store preview.'), { statusCode: 403 });
+  }
+  const copy = DEMO_COPY[language];
+  const transcript = [{ speaker: 'system', text: copy.greeting }];
+  const add = text => transcript.push({ speaker: 'assistant', text });
+  let route = scenario === 'outage' ? 'keypad_fallback' : 'ai_demo';
+  const records = [];
+  const privateScenario = ['delayed', 'billing', 'masked'].includes(scenario);
+  const context = { verified: privateScenario && verified, language, scenario, serviceOrder: null };
+  if (scenario === 'expired') {
+    add(copy.expired);
+    return { simulated: true, contentStatus: 'draft', language, route: 'access_ended', transcript, context, records };
+  }
+  if (privateScenario && !verified) {
+    add(copy.verify);
+    return { simulated: true, contentStatus: 'draft', language, route: 'verification_required', transcript, context, records };
+  }
+  if (privateScenario) context.serviceOrder = 'DEMO-ORDER-001';
+  if (scenario !== 'urgent') add(scenario === 'outage' ? copy.fallback : copy.intro);
+  if (!['outage', 'masked'].includes(scenario)) add(copy[scenario === 'registration' ? 'registration' : scenario === 'urgent' ? 'safety' : scenario]);
+
+  if (action === 'sms' || scenario === 'masked') {
+    route = consent ? 'sms_preview' : 'consent_required';
+    add(consent ? (scenario === 'masked' ? copy.masked : scenario === 'store' ? copy.storeSms : copy.sms) : copy.consent);
+  }
+  if ((['urgent', 'billing'].includes(scenario) && action === 'start') || action === 'agent') {
+    route = availability === 'available' ? 'warm_transfer' : availability === 'backup' ? 'on_call_backup' : 'callback_offered';
+    add(copy[availability === 'available' ? 'warm' : availability === 'backup' ? 'backup' : 'unavailable']);
+  }
+  if (action === 'callback' || action === 'ticket') {
+    route = action === 'callback' ? 'callback_requested' : 'help_desk_linked';
+    records.push({ id: 'DEMO-TICKET-001', type: 'ticket', simulated: true, language, status: 'open',
+      serviceOrder: context.serviceOrder, subject: DEMO_SCENARIOS.find(s => s.id === scenario)[language] });
+    if (action === 'callback') records.push({ id: 'DEMO-CALLBACK-001', type: 'callback', simulated: true,
+      language, status: 'requested', ticketId: 'DEMO-TICKET-001', serviceOrder: context.serviceOrder });
+    add(copy[action]);
+  }
+  return { simulated: true, contentStatus: 'draft', language, route, transcript, context, records };
+}
+
+const LABELS = {
+ EN:{adminPreview:'Admin / Hub preview',storePreview:'Store preview',workspace:'Communications & Support · Client review',eyebrow:'A connected support experience',title:'Bilingual communications',storeTitle:'Bilingual store support',subtitle:'Explore the proposed English and Spanish support journey.',notice:'REVIEW DEMO — All calls, SMS, transfers, tickets, callbacks, and order details are simulated. No messages are sent, no real tickets are created, and no microphone is used. Draft translations require client review.',draft:'DRAFT · NOT LIVE',setup:'Choose a scenario',scenario:'Sample journey',availability:'Simulated agent coverage',available:'Bilingual representative available',backup:'Primary unavailable · on-call available',unavailable:'No representative available',verified:'Simulate verified identity',verifiedHelp:'Demo control only; not an actual identity check.',consent:'Simulate SMS consent',consentHelp:'Preview wording only. Official app links are still needed.',run:'Run preview →',reset:'Reset preview',safetyPolicy:'Access ends immediately after completion or cancellation. Emergency assistance remains a direct device call to 911.',assistant:'RODLX virtual receptionist',scripted:'Scripted preview · EN / ES',listen:'Read greeting',agent:'Request an agent',callback:'Request callback',ticket:'Link Help Desk ticket',sms:'Preview SMS',records:'Help Desk & callback preview',sampleOnly:'SAMPLE RECORDS',config:'3  Review bilingual greeting drafts',configHelp:'Edit the proposed greeting in either language. Changes stay in this preview; download them for client review. This does not update production settings.',download:'Download review notes',needsApproval:'Content approval pending',clientNumbers:'Support number needed',clientAgents:'Agent coverage needed',footer:'Live delivery still requires Telnyx setup, approved bilingual content, verified caller identification, agent coverage, consent policies, and final acceptance testing. Voice playback uses your browser’s available voices; it is not a Telnyx AI call.',storeScope:'Store preview is restricted to store support, urgent guidance, and fallback. It does not expose customer–technician sessions or global routing controls.',empty:'Select a scenario and run the preview. Try both languages, unavailable agents, and consent checks.',emptyRecords:'No demo follow-up created. Tickets are only shown when you explicitly request a ticket or callback.',route:'Proposed routing outcome',identity:'Caller context',verifiedLabel:'Sample identity verified · DEMO-ORDER-001',unverifiedLabel:'No private order data disclosed',system:'Draft greeting',assistantLabel:'Demo assistant',ticketLabel:'Demo Help Desk ticket',callbackLabel:'Demo callback',recordNote:'Simulation only · not saved to live Help Desk',voiceMissing:'A matching browser voice is unavailable. Review the written greeting instead.',voiceUnavailable:'Speech playback is not supported by this browser.',downloadDone:'Review notes downloaded. No live configuration was changed.',routes:{ai_demo:'Scripted AI assistance',keypad_fallback:'Independent keypad fallback',verification_required:'Verify identity first',warm_transfer:'Bilingual warm transfer',on_call_backup:'On-call backup',callback_offered:'No agent available · offer callback',callback_requested:'Demo callback linked to ticket',help_desk_linked:'Demo Help Desk association',sms_preview:'Consented SMS preview',consent_required:'SMS blocked · consent needed',access_ended:'Communication access ended',store:'Store support'}},
+ ES:{adminPreview:'Vista de administración',storePreview:'Vista de tienda',workspace:'Comunicaciones y soporte · Revisión del cliente',eyebrow:'Una experiencia de soporte conectada',title:'Comunicaciones bilingües',storeTitle:'Soporte bilingüe para tiendas',subtitle:'Explore la propuesta de atención en inglés y español.',notice:'DEMOSTRACIÓN — Todas las llamadas, SMS, transferencias, tickets, devoluciones de llamada y órdenes son simulados. No se envían mensajes, no se crean tickets reales y no se usa el micrófono. Las traducciones requieren revisión del cliente.',draft:'BORRADOR · NO ACTIVO',setup:'Elija un escenario',scenario:'Ejemplo de atención',availability:'Disponibilidad simulada',available:'Representante bilingüe disponible',backup:'Principal no disponible · guardia disponible',unavailable:'Sin representantes disponibles',verified:'Simular identidad verificada',verifiedHelp:'Control de demostración; no verifica una identidad real.',consent:'Simular consentimiento para SMS',consentHelp:'Solo vista previa. Aún se necesitan los enlaces oficiales.',run:'Iniciar vista previa →',reset:'Reiniciar vista previa',safetyPolicy:'El acceso termina de inmediato al completar o cancelar el servicio. La llamada al 911 sigue siendo directa desde el dispositivo.',assistant:'Recepcionista virtual de RODLX',scripted:'Vista previa con guion · EN / ES',listen:'Escuchar saludo',agent:'Solicitar un agente',callback:'Solicitar devolución de llamada',ticket:'Vincular ticket de soporte',sms:'Vista previa del SMS',records:'Vista previa de tickets y llamadas',sampleOnly:'REGISTROS DE EJEMPLO',config:'3  Revisar los borradores de saludo',configHelp:'Edite el saludo en cualquiera de los dos idiomas. Los cambios solo se aplican a esta vista previa. Descárguelos para revisión; no modifican la configuración real.',download:'Descargar notas de revisión',needsApproval:'Contenido pendiente de aprobación',clientNumbers:'Se necesita número de soporte',clientAgents:'Se necesita cobertura de agentes',footer:'El servicio real requiere configuración de Telnyx, contenido bilingüe aprobado, verificación de identidad, cobertura de agentes, políticas de consentimiento y pruebas finales. El audio usa las voces disponibles del navegador; no es una llamada de IA de Telnyx.',storeScope:'La vista de tienda se limita al soporte de tienda, orientación urgente y respaldo. No muestra sesiones entre clientes y técnicos ni ajustes globales.',empty:'Seleccione un escenario e inicie la vista previa. Pruebe ambos idiomas, la falta de agentes y el consentimiento.',emptyRecords:'No hay seguimiento de ejemplo. Los tickets solo aparecen al solicitar un ticket o una devolución de llamada.',route:'Resultado de enrutamiento propuesto',identity:'Contexto del cliente',verifiedLabel:'Identidad de ejemplo verificada · DEMO-ORDER-001',unverifiedLabel:'No se divulgan datos privados de la orden',system:'Saludo en borrador',assistantLabel:'Asistente de demostración',ticketLabel:'Ticket de soporte de ejemplo',callbackLabel:'Devolución de llamada de ejemplo',recordNote:'Simulación · no se guarda en soporte real',voiceMissing:'No hay una voz del navegador para este idioma. Revise el saludo escrito.',voiceUnavailable:'Este navegador no admite reproducción de voz.',downloadDone:'Se descargaron las notas. No se modificó ninguna configuración real.',routes:{ai_demo:'Asistencia de IA con guion',keypad_fallback:'Menú de respaldo independiente',verification_required:'Verificar identidad primero',warm_transfer:'Transferencia asistida bilingüe',on_call_backup:'Representante de guardia',callback_offered:'Sin agentes · ofrecer devolución de llamada',callback_requested:'Devolución de llamada vinculada al ticket',help_desk_linked:'Vinculación con soporte de ejemplo',sms_preview:'Vista previa de SMS con consentimiento',consent_required:'SMS bloqueado · falta consentimiento',access_ended:'Acceso a comunicaciones finalizado',store:'Soporte de tienda'}}
+};
+const $ = id => document.getElementById(id);
+let language='EN', current=null, currentAction='start';
+const drafts={EN:DEMO_COPY.EN.greeting,ES:DEMO_COPY.ES.greeting};
+$('greetingEN').value=drafts.EN; $('greetingES').value=drafts.ES;
+const audience=()=>document.body.dataset.audience;
+const setText=(node,text)=>{node.textContent=text;return node};
+function block(tag,cls,text){const el=document.createElement(tag);if(cls)el.className=cls;if(text)el.textContent=text;return el}
+function renderLabels(){
+ const t=LABELS[language];document.documentElement.lang=language.toLowerCase();
+ document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=t[el.dataset.i18n]);
+ $('pageTitle').textContent=audience()==='store'?t.storeTitle:t.title;
+ $('english').setAttribute('aria-pressed',String(language==='EN'));$('spanish').setAttribute('aria-pressed',String(language==='ES'));
+ const old=$('scenario').value;$('scenario').replaceChildren();
+ DEMO_SCENARIOS.filter(s=>audience()!=='store'||['store','urgent','outage'].includes(s.id)).forEach(s=>{const o=block('option','',s[language]);o.value=s.id;$('scenario').append(o)});
+ if([...$('scenario').options].some(o=>o.value===old))$('scenario').value=old;
+ else $('scenario').value=audience()==='store'?'store':'delayed';
+ $('audience').value=audience();renderResult();
+}
+function inputs(){return{language,scenario:$('scenario').value,availability:audience()==='store'?'unavailable':$('availability').value,verified:audience()==='admin'&&$('verified').checked,consent:$('consent').checked,action:currentAction}}
+function run(action='start'){currentAction=action;current=simulateCommunication(inputs(),audience());renderResult()}
+function renderResult(){
+ const t=LABELS[language];$('conversation').replaceChildren();$('records').replaceChildren();$('feedback').textContent='';
+ if(!current){const box=block('div','empty');box.append(block('div','empty-mark','◌'),block('p','',t.empty));$('conversation').append(box);$('outcome').hidden=true}
+ else{
+  current.transcript.forEach((line,i)=>{const b=block('div',`bubble ${line.speaker}`);b.append(block('span','speaker',line.speaker==='system'?t.system:t.assistantLabel));b.append(document.createTextNode(i===0?drafts[language]:line.text));$('conversation').append(b)});
+  $('outcome').hidden=false;$('outcome').replaceChildren();
+  const route=block('div','',t.route);route.append(block('strong','',t.routes[current.route]||current.route));
+  const identity=block('div','',t.identity);identity.append(block('strong','',current.context.serviceOrder?t.verifiedLabel:t.unverifiedLabel));$('outcome').append(route,identity);
+ }
+ if(!current?.records.length)$('records').append(block('p','sub',t.emptyRecords));
+ else current.records.forEach(record=>{const el=block('article','record');el.append(block('span','eyebrow',record.type==='ticket'?t.ticketLabel:t.callbackLabel),block('strong','',record.id),block('p','',record.type==='callback'?`${record.ticketId} · ${record.language}`:record.subject),block('p','',t.recordNote));$('records').append(el)});
+}
+$('english').onclick=()=>switchLanguage('EN');$('spanish').onclick=()=>switchLanguage('ES');
+function switchLanguage(next){window.speechSynthesis?.cancel();language=next;renderLabels();if(current)run(currentAction)}
+$('run').onclick=()=>run();$('reset').onclick=()=>{window.speechSynthesis?.cancel();current=null;currentAction='start';$('verified').checked=false;$('consent').checked=false;renderResult()};
+['scenario','availability','verified','consent'].forEach(id=>$(id).onchange=()=>{if(current)run('start')});
+document.querySelectorAll('[data-action]').forEach(button=>button.onclick=()=>run(button.dataset.action));
+['EN','ES'].forEach(lang=>$(`greeting${lang}`).oninput=event=>{drafts[lang]=event.target.value;renderResult()});
+$('audience').onchange=event=>{document.body.dataset.audience=event.target.value;current=null;currentAction='start';$('verified').checked=false;renderLabels()};
+$('listen').onclick=()=>{
+ const t=LABELS[language];if(!window.speechSynthesis){$('feedback').textContent=t.voiceUnavailable;return}
+ const voice=window.speechSynthesis.getVoices().find(v=>v.lang.toLowerCase().startsWith(language.toLowerCase())&&v.localService);
+ if(!voice){$('feedback').textContent=t.voiceMissing;return}
+ window.speechSynthesis.cancel();const utterance=new SpeechSynthesisUtterance(drafts[language]);utterance.lang=language==='ES'?'es-US':'en-US';utterance.voice=voice;window.speechSynthesis.speak(utterance);
+};
+$('download').onclick=()=>{
+ const notes={status:'DRAFT_FOR_CLIENT_REVIEW',simulated:true,language,expiryPolicy:'Immediate on completion/cancellation; revoke old pair on reassignment',greetings:drafts,scenario:inputs(),preview:current,pendingClientInputs:['Telnyx credentials and numbers','Official app links','Bilingual content approval','Agent coverage and on-call contacts','Consent and retention policies']};
+ const blob=new Blob([JSON.stringify(notes,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),link=block('a');link.href=url;link.download='rodlx-communications-review.json';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);$('feedback').textContent=LABELS[language].downloadDone;
+};
+window.addEventListener('pagehide',()=>window.speechSynthesis?.cancel());
+renderLabels();
+</script>
+</body></html>
